@@ -18,12 +18,12 @@
           </tr>
         </thead>
         <tbody>
+          <% puts "Line Items:  #{@line_items.inspect}" %>
+          <% puts "Order:  #{@order.inspect}" %>
+          <% puts "Products:  #{@products.inspect}" %>
 
-          <%# <% puts @order.line_items.inspect %> %>
-          <%# <% puts @line_items.inspect %> %>
-          <% puts @.inspect %>
-          <% enhanced_cart do |item| %>
-            <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
+          <% @products.each_with_index do |item, index| %>
+            <%= render 'item', product: item, quantity: @line_items[index].quantity %>
           <% end %>
 
         </tbody>
@@ -33,7 +33,7 @@
               TOTAL:
             </th>
             <th>
-              <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
+              <%= humanized_money_with_symbol @order.total_cents / 100.0 %>
             </th>
           </tr>
         </tfoot>
