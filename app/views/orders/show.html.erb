@@ -6,6 +6,7 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <h5>Confirmation sent to  <%= @order.email %></h5>
   </div>
 
   <table class="table table-bordered">
@@ -18,10 +19,7 @@
           </tr>
         </thead>
         <tbody>
-          <% puts "Line Items:  #{@line_items.inspect}" %>
-          <% puts "Order:  #{@order.inspect}" %>
-          <% puts "Products:  #{@products.inspect}" %>
-
+         
           <% @products.each_with_index do |item, index| %>
             <%= render 'item', product: item, quantity: @line_items[index].quantity %>
           <% end %>
