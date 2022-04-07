@@ -5,7 +5,7 @@
   </header>
 
   <div class="panel panel-default items">
-    <% if cart_subtotal_cents == 0 %>
+    <% if enhanced_cart.blank? %>
 
     <div class="alert alert-warning" >You have nothing in your cart!</div>
     <%= link_to "Click here to add some items!", "/" %>
