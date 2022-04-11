@@ -7,7 +7,6 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def create
-    puts "HELLO I AM HERE ---- #{params[:category][:name]}"
     @category = Category.new(name: params[:category][:name])
 
     if @category.save
