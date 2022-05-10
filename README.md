@@ -3,7 +3,8 @@
 A mini e-commerce application built with Rails 4.2 for purposes of learning Rails.
 
 ## Screenshots
-
+![HomePage](https://github.com/Ryan-Williams-Dev/jungle-rails/blob/master/docs/homepage.png?raw=true)
+![Cart](https://github.com/Ryan-Williams-Dev/jungle-rails/blob/master/docs/cart.png?raw=true)
 
 ## Setup
 
